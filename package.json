@@ -1,0 +1,24 @@
+{
+  "name": "webpack-5-build-micro",
+  "version": "1.0.0",
+  "description": "\"# webpack-5-build-micro\"\r Lessons webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladKalachev/webpack-5-build-micro-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VladKalachev/webpack-5-build-micro-frontend/issues"
+  },
+  "homepage": "https://github.com/VladKalachev/webpack-5-build-micro-frontend#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  }
+}
