@@ -1,6 +1,8 @@
 // const { add, addAndMulitply } = require('./functions/add');
-const { add, addAndMulitply } = require('./functions');
+// const { add, addAndMulitply } = require('./functions');
 // const subtract = require('./functions/subtract')
+
+import { add } from './functions';
 
 function sum() {
   return "sub";
