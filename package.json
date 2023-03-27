@@ -4,6 +4,7 @@
   "description": "\"# webpack-5-build-micro\"\r Lessons webpack",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
