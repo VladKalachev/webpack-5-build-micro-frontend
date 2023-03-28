@@ -1,7 +1,7 @@
 import './index.css';
-document.getElementById('btn1').addEventListener('click', handlerClick)
+import './clearButton';
 
-function handlerClick() {
+document.getElementById('btn1').addEventListener('click', function(e) {
   const element = document.getElementById("header");
   element.innerHTML = "Hello world!";
 
@@ -12,4 +12,4 @@ function handlerClick() {
     el.innerHTML = fruit;
     listElement.appendChild(el);
   })
-}
+})
