@@ -2,6 +2,6 @@
   color: red;
 }
 
-.button {
+:global(.button) {
   background: yellow;
 }

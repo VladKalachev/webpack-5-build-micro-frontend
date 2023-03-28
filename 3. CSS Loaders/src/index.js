@@ -1,7 +1,9 @@
-import './index.css';
+import style from './index.css';
 import './clearButton';
 
-document.getElementById('btn1').addEventListener('click', function(e) {
+const btn1 = document.getElementById('btn1');
+
+btn1.addEventListener('click', function(e) {
   const element = document.getElementById("header");
   element.innerHTML = "Hello world!";
 
@@ -13,3 +15,5 @@ document.getElementById('btn1').addEventListener('click', function(e) {
     listElement.appendChild(el);
   })
 })
+
+btn1.classList.add([style.button]);
