@@ -8,5 +8,4 @@ el.onclick = function() {
   alert("Clear button clicked");
 }
 
-
 document.body.appendChild(el);
