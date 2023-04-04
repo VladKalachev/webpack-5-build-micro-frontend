@@ -1,25 +1,33 @@
-import style from './index.scss';
-import './clearButton';
-import logo from './assets/logo.png';
-import './assets/fonts/Redressed-Regular.ttf'
+import _ from "lodash";
+import newArrivalData from "./newArrival.json";
 
-const btn1 = document.getElementById('btn1');
-const logEl = document.getElementById('logo');
+function renderItems(itemArr) {
+  const cakeContainerEl = document.getElementById("cakesContainer");
+  cakeContainerEl.innerHTML = ``;
+  _.forEach(itemArr, (item) => {
+    let cakeEl = document.createElement("div");
+    cakeEl.classList.add("cakes-container");
+    cakeEl.innerHTML = `
+    <img src="./assets/${item.imgName}" />
+    <strong>${item.title}</strong>
+    <span>${item.price}</span>
+    `;
+    cakeContainerEl.appendChild(cakeEl);
+  });
+}
 
-btn1.addEventListener('click', function() {
-  const element = document.getElementById("header");
-  element.innerHTML = "Hello world!";
-  element.classList.add([style.header]);
+document
+  .getElementById("categorySelect")
+  .addEventListener("change", function (e) {
+    const selected = e.target.value;
+    if (selected === "all") {
+      renderItems(newArrivalData);
+    } else {
+      let filteredData = _.filter(newArrivalData, function (item) {
+        return item.category === selected;
+      });
+      renderItems(filteredData);
+    }
+  });
 
-  const list = ['Apples', 'Pears', 'Orange'];
-  const listElement = document.getElementById('list');
-
-  list.forEach(function(fruit) {
-    const el = document.createElement('li');
-    el.innerHTML = fruit;
-    listElement.appendChild(el);
-  })
-})
-
-btn1.classList.add([style.button]);
-logEl.src = logo;
+renderItems(newArrivalData);
