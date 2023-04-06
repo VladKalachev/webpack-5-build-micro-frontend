@@ -27,7 +27,6 @@ function renderProducts() {
     renderedItems.push(bakeryEl);
   });
 
-  
   _.forEach(renderedItems, (item) => {
     el.appendChild(item);
   });
