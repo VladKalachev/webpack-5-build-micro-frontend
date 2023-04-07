@@ -3,6 +3,7 @@ import _ from 'lodash';
 import bootstrap from 'bootstrap';
 import Typed from 'typed.js';
 import validate from 'validate.js';
+import banner from './assets/banner-image.png';
 
 import "./index.css";
 import "./__vendor.scss";
@@ -55,3 +56,8 @@ const footerCol3 = $("#footer-column-3")[0];
 buildFooterItems(footerCol1, footerCol1Items);
 buildFooterItems(footerCol2, footerCol2Items);
 buildFooterItems(footerCol3, footerCol3Items);
+
+
+const bannerEL = $("#banner-image")[0];
+console.log(bannerEL);
+bannerEL.src = banner;
