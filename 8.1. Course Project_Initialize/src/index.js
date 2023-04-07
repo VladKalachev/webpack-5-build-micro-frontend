@@ -1,3 +1,8 @@
+import $ from 'jquery';
+import _ from 'lodash';
+import bootstrap from 'bootstrap';
+import Typed from 'typed.js';
+
 import "./libs/toast/toastr.scss";
 
 const footerCol1Items = ["Home", "About", "Contact us", "FAQ", "Blog"];
