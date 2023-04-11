@@ -20,6 +20,7 @@
     "validate.js": "^0.13.1"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.49.9",
