@@ -14,6 +14,7 @@ import courseData from "../data/courses.json";
 function loadCourses() {
   const courseListSection = $("#course-list")[0];
 
+  
   let courseItems = "";
   _.each(courseData, (course) => {
     const courseItem =
