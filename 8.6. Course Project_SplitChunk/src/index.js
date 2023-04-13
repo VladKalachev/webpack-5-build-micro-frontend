@@ -12,6 +12,7 @@ const footerCol1Items = ["Home", "About", "Contact us", "FAQ", "Blog"];
 const footerCol2Items = ["Flutter", "Javascript", "Java", "Nodejs", "Python"];
 const footerCol3Items = ["Home", "Feature", "Pricing", "FAQ", "About"];
 
+
 //Animating the text
 
 var options = {
