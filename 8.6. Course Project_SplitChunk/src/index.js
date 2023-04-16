@@ -14,7 +14,6 @@ const footerCol3Items = ["Home", "Feature", "Pricing", "FAQ", "About"];
 
 //Animating the text
 
-
 var options = {
   strings: ["<i>Top Educational Courses</i>"],
   typeSpeed: 40,
