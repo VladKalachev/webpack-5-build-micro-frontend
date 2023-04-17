@@ -55,5 +55,10 @@ module.exports = {
     new BundleAnalyzerPlugin({
 
     })
-  ]
+  ],
+  optimazation: {
+    splitChunks: {
+      
+    }
+  }
 };
