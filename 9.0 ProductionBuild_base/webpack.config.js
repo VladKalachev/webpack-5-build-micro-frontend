@@ -1,5 +1,5 @@
 const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
@@ -9,7 +9,7 @@ module.exports = {
     courses: "./src/pages/courses.js",
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -28,37 +28,36 @@ module.exports = {
       },
       {
         test: /\.(png|jpeg|jpg|gif)$/,
-        type: "asset/resource"
-      }
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "./src/index.html",
       chunks: ["index"],
-      filename: "index.html"
+      filename: "index.html",
     }),
-    new HTMLWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: "./src/pages/courses.html",
       chunks: ["courses"],
-      filename: "courses.html"
+      filename: "courses.html",
+      base: "pages",
     }),
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/assets/images/"),
+          from: path.resolve(__dirname, "src/assets/images/*"),
           to: path.resolve(__dirname, "dist"),
           context: "src",
-        }        
+        },
       ],
     }),
-    // new BundleAnalyzerPlugin({
-
-    // })
+    new BundleAnalyzerPlugin({}),
   ],
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
-  }
+      chunks: "all",
+    },
+  },
 };
